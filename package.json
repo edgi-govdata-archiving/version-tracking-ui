@@ -1,0 +1,31 @@
+{
+  "name": "version-tracking-ui-bookmarklet",
+  "version": "0.0.1",
+  "main": "browser-tool.js",
+  "description": "Generates a bookmarklet to assist the archival of government data",
+  "scripts": {
+    "build": "babel browser-tool.js | browserify - | uglifyjs > build/browser-tool.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edgi-govdata-archiving/version-tracking-ui.git"
+  },
+  "author": "James McKinney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edgi-govdata-archiving/version-tracking-ui/issues"
+  },
+  "homepage": "https://github.com/edgi-govdata-archiving/version-tracking-ui",
+  "devDependencies": {
+    "angular": "^1.3.15",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "browserify": "^10.0.0"
+  },
+  "dependencies": {
+    "bookmarkleter": "^0.2.2"
+  },
+  "babel": {
+    "presets": ["env"]
+  }
+}
