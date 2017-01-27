@@ -1,6 +1,8 @@
 # Version tracking Bookmarklet
 
-Go to https://edgi-govdata-archiving.github.io/version-tracking-ui/
+Go to https://edgi-govdata-archiving.github.io/version-tracking-ui/ to get the bookmarklet.
+
+Do you use this bookmarklet? Do you have an idea to make it better? [Share your feedback by creating an issue on GitHub.](https://github.com/edgi-govdata-archiving/version-tracking-ui/issues)
 
 ## Development
 
