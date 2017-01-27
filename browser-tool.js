@@ -33,25 +33,28 @@ app.controller('myController', ['$scope', function ($scope) {
       $.get(url, function (data) {
         // The timestamps and version IDs are stored in the HTML. We collect each
         // separately, as they may not appear in a predictable order.
+        var match;
 
         var timestamps = [];
-        var timestamp_regex = /"fst":"(\d+)"/g;
+        var timestamp_regex = /"fst":"(\\d+)"/g;
         while ((match = timestamp_regex.exec(data)) !== null) {
           timestamps.push(parseInt(match[1]) * 1000);
         }
 
         var versions = [];
-        var version_regex = /"cid":"(\d+)"/g;
+        var version_regex = /"cid":"(\\d+)"/g;
         while ((match = version_regex.exec(data)) !== null) {
           versions.push(match[1]);
         }
 
-        var compare_to_version = '0';
-        timestamps.slice(2).forEach(function (timestamp, i) {
-          if (timestamp >= threshold) {
-            compare_to_version = versions[i + 2];
+        var compare_to_version;
+        for (var i = 1, l = timestamps.length; i < l; i++) {
+          compare_to_version = versions[i];
+          // If we crossed into versions the user had already seen, break the loop.
+          if (timestamps[i] <= threshold) {
+            break;
           }
-        });
+        }
 
         window.open(url + versions[0] + ':' + compare_to_version + '/', '_blank').focus();
       })
@@ -84,5 +87,6 @@ app.controller('myController', ['$scope', function ($scope) {
     }
   };
 
+  // Initialize the bookmarklet.
   $scope.updateBookmarklet($scope.options);
 }]);
