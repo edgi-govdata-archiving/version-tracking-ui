@@ -24,7 +24,15 @@
         </div>
       </form>
 
-      <p ng-class="{'text-muted': !output}">Drag this link to your bookmarks bar: <a ng-href="{{ output }}">EDGI Version Monitoring Bookmarklet</a></p>
+      <ul>
+        <li ng-class="{'text-muted': !output}">Drag this link to your bookmarks bar: <a ng-href="{{ output }}">EDGI Version Monitoring Bookmarklet</a>.</li>
+        <li>Open the web UI and navigate to a Site View. Click the bookmarklet.</li>
+        <li>The bookmarklet will highlight pages that have changed since your last work session and that have multiple versions.</li>
+        <li>Click the highlighted links to quickly jump to the page comparing the most recent version to the version you last saw.</li>
+        <li>You'll need to enable popups when prompted by your browser.</li>
+      </ul>
+
+      <p>Do you use this bookmarklet? Do you have an idea to make it better? <a href="https://github.com/edgi-govdata-archiving/version-tracking-ui/issues">Share your feedback by creating an issue on GitHub.</a></p>
 
       <p ng-show>{{ error }}</p>
     </div>
