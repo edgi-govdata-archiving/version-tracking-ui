@@ -1,5 +1,7 @@
 # Versionista Bookmarklet
 
+Go to https://github.com/edgi-govdata-archiving/version-tracking-ui/
+
 ## Development
 
 * `npm install .`
