@@ -1,6 +1,10 @@
 # Version tracking Bookmarklet
 
-Go to https://edgi-govdata-archiving.github.io/version-tracking-ui/
+This repo allows users to personalize a JavaScript Bookmarklet for use in monitoring changes to websites through a web-based UI.  
+
+## Usage
+Go to https://edgi-govdata-archiving.github.io/version-tracking-ui/ and follow the instructions.
+
 
 ## Development
 
