@@ -13,7 +13,7 @@ People are using a web UI to monitor changes to websites. They want to change th
 ## Development
 
 * `npm install .`
-* Edit [`browser-tool.js`](browser-tool.js)
+* Edit [`browser-tool.js`](browser-tool.js). `$scope.input` is the bookmarklet's source code.
 * `npm run build`
 * `open index.html`
 

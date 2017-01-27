@@ -12,6 +12,7 @@ app.config(['$compileProvider', function ($compileProvider) {
 }]);
 
 app.controller('myController', ['$scope', function ($scope) {
+  // This is the bookmarklet's source code.
   $scope.input = `
   // How far back to go, in milliseconds (7 days).
   var threshold = new Date() - 604800000;
