@@ -1,6 +1,6 @@
 # Versionista Bookmarklet
 
-Go to https://github.com/edgi-govdata-archiving/version-tracking-ui/
+Go to https://edgi-govdata-archiving.github.io/version-tracking-ui/
 
 ## Development
 
